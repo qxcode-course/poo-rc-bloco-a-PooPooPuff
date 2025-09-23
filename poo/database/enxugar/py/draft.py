@@ -4,6 +4,8 @@ class Towel:
         self.size:str=size
         self.wetness:int=0
 
+    def isDry(self):
+        
     def dry(self, amount: int)->None:
         self.wetness+=amount
         if self.wetness>=self.isMaxWetness():
@@ -20,21 +22,24 @@ class Towel:
         return 0
         
     def __str__(self)->str:
-        return f"Color:{self.color}, Size:{self.size}, Wet:{self.wetness}"
+        return f"Cor: {self.color}, Tamanho: {self.size}, Umidade: {self.wetness}"
 
 def main():
     towel:Towel=Towel("","")
     while True:
         line: str=input()
+        print("$"+line)
         args:list[str]=line.split(" ")
 
         if args[0]=="end":
             break
-        elif args[0]=="new":
+        elif args[0]=="criar":
             color:str=args[1]
             size:str=args[2]
             towel=Towel(color,size)
-        elif args[0]=="show":
+        elif args[0]=="seca":
+            print("sim" if towel.isDry() else "nao")
+        elif args[0]=="mostrar":
             print(towel)
         else:
             print("fail: command not found")

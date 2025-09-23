@@ -1,0 +1,29 @@
+{
+    "patches": [
+        {
+            "label": "2025-09-23_14-10-03",
+            "content": "@@ -137,14 +137,8 @@\n =0%0A%0A\n-    %0A%0A\n     \n",
+            "lines": "42"
+        },
+        {
+            "label": "2025-09-23_14-17-06",
+            "content": "@@ -738,32 +738,8 @@\n t()%0A\n-        print(%22$%22+line)%0A\n     \n@@ -773,16 +773,16 @@\n it(%22 %22)%0A\n+\n %0A       \n@@ -846,13 +846,11 @@\n %5D==%22\n-criar\n+new\n %22:%0A \n@@ -970,15 +970,12 @@\n %5D==%22\n-mostrar\n+show\n %22:%0A \n",
+            "lines": "44"
+        },
+        {
+            "label": "2025-09-23_14-22-47",
+            "content": "@@ -594,16 +594,18 @@\n urn f%22Co\n+lo\n r:%7Bself.\n@@ -616,15 +616,12 @@\n r%7D, \n-Tamanho\n+Size\n :%7Bse\n@@ -634,15 +634,11 @@\n e%7D, \n-Umidade\n+Wet\n :%7Bse\n",
+            "lines": "45"
+        },
+        {
+            "label": "2025-09-23_14-23-40",
+            "content": "@@ -596,17 +596,16 @@\n n f%22Cor:\n- \n %7Bself.co\n@@ -618,17 +618,16 @@\n Tamanho:\n- \n %7Bself.si\n@@ -639,17 +639,16 @@\n Umidade:\n- \n %7Bself.we\n",
+            "lines": "45"
+        },
+        {
+            "label": "2025-09-23_14-24-01",
+            "content": "class Towel:\n    def __init__(self,color:str,size:str):\n        self.color:str=color\n        self.size:str=size\n        self.wetness:int=0\n\n    \n\n    def dry(self, amount: int)->None:\n        self.wetness+=amount\n        if self.wetness>=self.isMaxWetness():\n            self.wetness=self.isMaxWetness()\n            print(\"toalha ta ensopada ze\")\n\n    def isMaxWetness(self)->int:\n        if self.size==\"P\":\n            return 10\n        if self.size==\"M\":\n            return 20\n        if self.size==\"G\":\n            return 30\n        return 0\n        \n    def __str__(self)->str:\n        return f\"Cor: {self.color}, Tamanho: {self.size}, Umidade: {self.wetness}\"\n\ndef main():\n    towel:Towel=Towel(\"\",\"\")\n    while True:\n        line: str=input()\n        print(\"$\"+line)\n        args:list[str]=line.split(\" \")\n\n        if args[0]==\"end\":\n            break\n        elif args[0]==\"criar\":\n            color:str=args[1]\n            size:str=args[2]\n            towel=Towel(color,size)\n        elif args[0]==\"mostrar\":\n            print(towel)\n        else:\n            print(\"fail: command not found\")\n\nmain()",
+            "lines": "45"
+        }
+    ]
+}
