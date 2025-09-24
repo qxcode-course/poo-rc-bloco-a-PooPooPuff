@@ -5,6 +5,7 @@ class Towel:
         self.wetness:int=0
 
     def isDry(self):
+        return self.wetness==0
         
     def dry(self, amount: int)->None:
         self.wetness+=amount
