@@ -6,7 +6,6 @@ filter:
 version: 0.0.1
 database: database
 expanded:
-- configuracao-e-aquecimento
 - campanha-principal
 - bloco_b-primeiras-classes
 tasks:

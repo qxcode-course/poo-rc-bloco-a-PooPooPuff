@@ -11,7 +11,7 @@ class Towel:
         self.wetness+=amount
         if self.wetness>=self.isMaxWetness():
             self.wetness=self.isMaxWetness()
-            print("toalha ta ensopada ze")
+            print("toalha encharcada")
 
     def isMaxWetness(self)->int:
         if self.size=="P":
