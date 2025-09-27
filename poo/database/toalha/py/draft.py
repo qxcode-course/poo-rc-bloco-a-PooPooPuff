@@ -30,11 +30,11 @@ def main():
 
         if args[0]=="end":
             break
-        elif args[0]=="new":
+        elif args[0]=="criar":
             color:str=args[1]
             size:str=args[2]
             towel=Towel(color,size)
-        elif args[0]=="show":
+        elif args[0]=="mostrar":
             print(towel)
         else:
             print("fail: command not found")
