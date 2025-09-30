@@ -87,8 +87,13 @@
         },
         {
             "label": "2025-09-24_14-40-49",
-            "content": "class Animal:\n    def __init__(self,species:str,age:int,sound:str):\n        self.species:str=species\n        self.age:int=0\n        self.sound:str=sound\n\n    def __str__(self)->str:\n        return f\"{self.species}:{self.age}:{self.sound}\"\n\n    def ageBy(self, amount:int)->None:\n        self.age+=amount\n        \n    #def \n\ndef main():\n    animal:Animal=Animal(\"\",0,\"\")\n    while True:\n        line:str=input()\n        print(\"$\"+line)\n        args:list[str]=line.split(\" \")\n        \n        if args[0]==\"end\":\n            break\n        #elif args[0]==\"init\":\n            species:str=args[1]\n            age:int=args[2] # type: ignore\n            sound:str=args[3]\n            animal=Animal(species,age,sound)\n        elif args[0]==\"show\":\n            print(animal)\n\nmain()",
+            "content": "@@ -306,25 +306,16 @@\n        %0A\n-        %0A\n     #def\n",
             "lines": "32"
+        },
+        {
+            "label": "2025-09-27_00-52-10",
+            "content": "class Animal:\n    def __init__(self,species:str,age:int,sound:str):\n        self.species:str=species\n        self.age:int=0\n        self.sound:str=sound\n\n    def __str__(self)->str:\n        return f\"{self.species}:{self.age}:{self.sound}\"\n\n    def ageBy(self, amount:int)->None:\n        self.age+=amount\n        \n        \n    #def \n\ndef main():\n    animal:Animal=Animal(\"\",0,\"\")\n    while True:\n        line:str=input()\n        print(\"$\"+line)\n        args:list[str]=line.split(\" \")\n        \n        if args[0]==\"end\":\n            break\n        #elif args[0]==\"init\":\n            species:str=args[1]\n            age:int=args[2] # type: ignore\n            sound:str=args[3]\n            animal=Animal(species,age,sound)\n        elif args[0]==\"show\":\n            print(animal)\n\nmain()",
+            "lines": "33"
         }
     ]
 }
