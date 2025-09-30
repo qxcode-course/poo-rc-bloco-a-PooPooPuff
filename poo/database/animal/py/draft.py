@@ -8,12 +8,6 @@ class Animal:
         return f"{self.specie}:{self.age}:{self.sound}"
 
     def ageBy(self, increment:int)->None:
-<<<<<<< HEAD
-        self.age+=increment
-        
-        
-    #def 
-=======
        if self.age==4:
         print(f"warning: {self.specie} morreu")
         return
@@ -33,7 +27,6 @@ class Animal:
             return self.sound
         if self.age==4:
             return "RIP"
->>>>>>> ca31220ec6ddd40abaefa8e8c483b46b1760b2f4
 
 def main():
     animal:Animal=Animal("","")
