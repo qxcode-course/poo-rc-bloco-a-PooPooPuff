@@ -1,20 +1,35 @@
 class Animal:
-    def __init__(self,species:str,age:int,sound:str):
-        self.species:str=species
+    def __init__(self,specie:str,sound:str):
+        self.specie:str=specie
         self.age:int=0
         self.sound:str=sound
 
     def __str__(self)->str:
-        return f"{self.species}:{self.age}:{self.sound}"
+        return f"{self.specie}:{self.age}:{self.sound}"
 
-    def ageBy(self, amount:int)->None:
-        self.age+=amount
-        
-        
-    #def 
+    def ageBy(self, increment:int)->None:
+       if self.age==4:
+        print(f"warning: {self.specie} morreu")
+        return
+       self.age+=increment
+       if self.age>=4:
+           self.age=4
+           print(f"warning: {self.specie} morreu")
+
+    def makeSound(self)->str: #type: ignore
+        if self.age==0:
+            return "---"
+        if self.age==1:
+            return self.sound
+        if self.age==2:
+            return self.sound
+        if self.age==3:
+            return self.sound
+        if self.age==4:
+            return "RIP"
 
 def main():
-    animal:Animal=Animal("",0,"")
+    animal:Animal=Animal("","")
     while True:
         line:str=input()
         print("$"+line)
@@ -22,12 +37,15 @@ def main():
         
         if args[0]=="end":
             break
-        #elif args[0]=="init":
-            species:str=args[1]
-            age:int=args[2] # type: ignore
-            sound:str=args[3]
-            animal=Animal(species,age,sound)
-        elif args[0]=="show":
+        if args[0]=="init":
+            specie:str=args[1]
+            sound:str=args[2]
+            animal=Animal(specie,sound)
+        if args[0]=="show":
             print(animal)
-
+        if args[0]=="grow":
+            increment:int=int(args[1])
+            animal.ageBy(increment)
+        if args[0]=="noise":
+            print(animal.makeSound())
 main()
