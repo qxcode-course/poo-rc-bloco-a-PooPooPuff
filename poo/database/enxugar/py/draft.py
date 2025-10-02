@@ -12,6 +12,9 @@ class Towel:
         if self.wetness>=self.isMaxWetness():
             self.wetness=self.isMaxWetness()
             print("toalha encharcada")
+    
+    def wringOut(self):
+        self.wetness=0
 
     def isMaxWetness(self)->int:
         if self.size=="P":
@@ -42,6 +45,11 @@ def main():
             print("sim" if towel.isDry() else "nao")
         elif args[0]=="mostrar":
             print(towel)
+        elif args[0]=="enxugar":
+            amount:int=int(args[1])
+            towel.dry(amount)
+        elif args[0]=="torcer":
+            towel.wringOut()
         else:
             print("fail: command not found")
 

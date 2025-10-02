@@ -16,7 +16,7 @@ class Animal:
            self.age=4
            print(f"warning: {self.specie} morreu")
 
-    def makeSound(self)->str: #type: ignore
+    def makeSound(self)->str:
         if self.age==0:
             return "---"
         if self.age==1:

@@ -1,0 +1,304 @@
+{
+    "patches": [
+        {
+            "label": "2025-09-30_19-28-03",
+            "content": "@@ -1,635 +0,0 @@\n-class Car:%0A    def __init__(self,pas:int,km:int,gas:int):%0A        self.pas:int=0%0A        self.km:int=0%0A        self.gas:int=0%0A        %0A    def __str__(self)-%3Estr:%0A        return f%22pass: %7Bself.pas%7D, gas: %7Bself.gas%7D, km: %7Bself.km%7D%22%0A        %0Adef main():%0A    car:Car=Car(%22%22,%22%22,%22%22)%0A    while True:%0A        line:str=input()%0A        print(%22$%22+line)%0A        args:list%5Bstr%5D=line.split(%22 %22)%0A        %0A        if args%5B0%5D==%22show%22:%0A            print(car)%0A        if args%5B0%5D==%22end%22:%0A            break%0A        if args%5B0%5D==%22init%22:%0A            pas:int=args%5B1%5D%0A            km:int=args%5B2%5D%0A            gas:int=args%5B3%5D%0A            car=Car%5Bpas,km,gas%5D%0Amain()\n",
+            "lines": "0"
+        },
+        {
+            "label": "2025-09-30_19-57-48",
+            "content": "@@ -227,98 +227,8 @@\n m%7D%22%0A\n-    %0A    def maxPas(self,increment:int)-%3ENone:%0A        self.pas+=increment%0A        return%0A\n     \n@@ -626,123 +626,8 @@\n as%5D%0A\n-        if args%5B0%5D==%22enter%22:%0A            increment:int=int(args%5B1%5D)%0A            car.maxPas(increment)%0A            %0A\n main\n",
+            "lines": "26"
+        },
+        {
+            "label": "2025-09-30_20-03-38",
+            "content": "@@ -236,9 +236,8 @@\n     \n-#\n def \n",
+            "lines": "34"
+        },
+        {
+            "label": "2025-09-30_20-03-58",
+            "content": "@@ -228,24 +228,25 @@\n %7D%22%0A    %0A    \n+#\n def maxPass(\n@@ -243,17 +243,16 @@\n f maxPas\n-s\n (self,in\n@@ -803,17 +803,16 @@\n r.maxPas\n-s\n (increme\n",
+            "lines": "34"
+        },
+        {
+            "label": "2025-09-30_20-06-10",
+            "content": "@@ -721,17 +721,16 @@\n         \n-#\n if args%5B\n@@ -754,17 +754,16 @@\n         \n-#\n incremen\n@@ -797,9 +797,8 @@\n     \n-#\n car.\n@@ -815,16 +815,18 @@\n crement)\n+%0A \n         \n",
+            "lines": "34"
+        },
+        {
+            "label": "2025-09-30_20-07-43",
+            "content": "@@ -236,16 +236,19 @@\n     def \n+max\n Pass(sel\n@@ -265,19 +265,20 @@\n t:int)-%3E\n-int\n+None\n :%0A      \n@@ -713,32 +713,33 @@\n km,gas%5D%0A        \n+#\n if args%5B0%5D==%22ent\n@@ -755,16 +755,17 @@\n         \n+#\n incremen\n@@ -799,12 +799,16 @@\n     \n+#\n car.\n+max\n Pass\n",
+            "lines": "33"
+        },
+        {
+            "label": "2025-09-30_20-10-34",
+            "content": "@@ -716,17 +716,16 @@\n %0A       \n-#\n  if args\n@@ -746,17 +746,16 @@\n         \n-#\n     incr\n@@ -790,9 +790,8 @@\n     \n-#\n    c\n",
+            "lines": "33"
+        },
+        {
+            "label": "2025-09-30_20-22-28",
+            "content": "@@ -236,19 +236,16 @@\n     def \n-max\n Pass(sel\n@@ -271,35 +271,8 @@\n nt:%0A\n-        if self.pas%3C2:%0A    \n     \n@@ -285,17 +285,25 @@\n lf.pas+=\n-1\n+increment\n %0A       \n@@ -708,32 +708,33 @@\n ,km,gas%5D%0A       \n+#\n  if args%5B0%5D==%22en\n@@ -743,24 +743,25 @@\n r%22:%0A        \n+#\n     incremen\n@@ -792,18 +792,16 @@\n     \n+#\n    car.\n-max\n Pass\n",
+            "lines": "33"
+        },
+        {
+            "label": "2025-09-30_20-32-27",
+            "content": "@@ -248,17 +248,36 @@\n ass(self\n-)\n+,increment:int)-%3Eint\n :%0A      \n@@ -776,22 +776,69 @@\n     \n-car.maxPass+=1\n+increment:int=int(args%5B1%5D)%0A            car.maxPass(increment)\n     \n",
+            "lines": "34"
+        },
+        {
+            "label": "2025-09-30_20-33-22",
+            "content": "@@ -271,17 +271,16 @@\n elf.pas%3C\n-=\n 2:%0A     \n",
+            "lines": "33"
+        },
+        {
+            "label": "2025-09-30_20-35-36",
+            "content": "@@ -721,17 +721,16 @@\n         \n-#\n if args%5B\n@@ -758,9 +758,8 @@\n     \n-#\n car.\n",
+            "lines": "33"
+        },
+        {
+            "label": "2025-09-30_20-35-46",
+            "content": "@@ -271,16 +271,17 @@\n elf.pas%3C\n+=\n 2:%0A     \n@@ -311,39 +311,14 @@\n     \n-else:%0A            print(%22Fail%22)\n+return\n %0A   \n",
+            "lines": "33"
+        },
+        {
+            "label": "2025-09-30_20-38-22",
+            "content": "@@ -737,32 +737,33 @@\n km,gas%5D%0A        \n+#\n if args%5B0%5D==%22ent\n@@ -779,16 +779,17 @@\n         \n+#\n car.maxP\n",
+            "lines": "34"
+        },
+        {
+            "label": "2025-09-30_20-38-33",
+            "content": "@@ -335,40 +335,12 @@\n nt(%22\n-f\n+F\n ail\n-: limite de pessoas atingido\n %22)%0A \n@@ -778,16 +778,39 @@\n         \n+car.maxPass+=1         \n   %0Amain(\n",
+            "lines": "34"
+        },
+        {
+            "label": "2025-09-30_20-39-27",
+            "content": "@@ -777,9 +777,8 @@\n     \n-#\n if a\n@@ -808,17 +808,15 @@\n         \n-  \n %0Amain()\n",
+            "lines": "34"
+        },
+        {
+            "label": "2025-09-30_20-39-46",
+            "content": "@@ -0,0 +1,825 @@\n+class Car:%0A    def __init__(self,pas:int,km:int,gas:int):%0A        self.pas:int=0%0A        self.km:int=0%0A        self.gas:int=0%0A        %0A    def __str__(self)-%3Estr:%0A        return f%22pass: %7Bself.pas%7D, gas: %7Bself.gas%7D, km: %7Bself.km%7D%22%0A    %0A    def maxPass(self):%0A        if self.pas%3C2:%0A            self.pas+=1%0A        else:%0A            print(%22fail: limite de pessoas atingido%22)%0A        %0Adef main():%0A    car:Car=Car(%22%22,%22%22,%22%22)%0A    while True:%0A        line:str=input()%0A        print(%22$%22+line)%0A        args:list%5Bstr%5D=line.split(%22 %22)%0A        %0A        if args%5B0%5D==%22show%22:%0A            print(car)%0A        if args%5B0%5D==%22end%22:%0A            break%0A        if args%5B0%5D==%22init%22:%0A            pas:int=args%5B1%5D%0A            km:int=args%5B2%5D%0A            gas:int=args%5B3%5D%0A            car=Car%5Bpas,km,gas%5D%0A        #if args%5B0%5D==%22enter%22:%0A                %0Amain()\n",
+            "lines": "34"
+        },
+        {
+            "label": "2025-10-01_20-18-22",
+            "content": "@@ -1,461 +0,0 @@\n-class Car:%0A    def __init__(self):%0A        self.pas:int=0%0A        self.gas:int=0%0A        self.km:int=0%0A        %0A    def __str__(self)-%3Estr:%0A        print(f%22pass: %7Bself.pas%7D, gas: %7Bself.gas%7D, km: %7Bself.km%7D%22)%0A        %0Adef main():%0A    car:Car=Car()%0A    while True:%0A        line:str=input()%0A        print(%22$%22+line)%0A        args:list%5Bstr%5D=line.split(%22 %22)%0A        %0A        if args%5B0%5D==%22show%22:%0A            print(car)%0A        if args%5B0%5D==%22end%22:%0A            break%0Amain()\n",
+            "lines": "0"
+        },
+        {
+            "label": "2025-10-01_20-31-39",
+            "content": "@@ -204,23 +204,8 @@\n %7D%22)%0A\n-        return%0A\n     \n",
+            "lines": "21"
+        },
+        {
+            "label": "2025-10-01_20-31-51",
+            "content": "@@ -145,15 +145,8 @@\n     \n-return \n prin\n@@ -200,32 +200,38 @@\n f.km%7D%22)%0A        \n+return\n %0A        %0Adef ma\n",
+            "lines": "22"
+        },
+        {
+            "label": "2025-10-01_20-31-58",
+            "content": "@@ -148,16 +148,22 @@\n  return \n+print(\n f%22pass: \n@@ -205,16 +205,17 @@\n elf.km%7D%22\n+)\n %0A       \n",
+            "lines": "22"
+        },
+        {
+            "label": "2025-10-01_20-32-14",
+            "content": "@@ -31,120 +31,9 @@\n lf):\n- #Lembrete: essa daqui se chama construtor, os %22Parametros%22 (requisitos de cria%C3%A7%C3%A3o) ficam dentro dos parenteses\n %0A\n+\n     \n@@ -136,48 +136,8 @@\n str:\n- #Lembrete: essa daqui se chama ToString\n %0A   \n@@ -218,16 +218,16 @@\n        %0A\n+\n def main\n@@ -233,106 +233,8 @@\n n():\n- #Lembrete: esse %C3%A9 o main, no qual n%C3%B3s utilizamos pra interagir com o c%C3%B3digo, o liga/desliga, etc.\n %0A   \n",
+            "lines": "22"
+        },
+        {
+            "label": "2025-10-01_21-35-48",
+            "content": "@@ -359,86 +359,8 @@\n     \n-%0A    def enter(self,increment:int)-%3ENone:%0A        self.pas+=increment%0A        \n     \n@@ -710,109 +710,8 @@\n eak%0A\n-        if args%5B0%5D==%22enter%22:%0A            increment:int=int(args%5B0%5D)%0A            car.enter(increment)%0A\n main\n",
+            "lines": "22"
+        },
+        {
+            "label": "2025-10-01_21-58-46",
+            "content": "@@ -843,16 +843,23 @@\n int=int(\n+args%5B0%5D\n )%0A      \n",
+            "lines": "28"
+        },
+        {
+            "label": "2025-10-01_21-58-54",
+            "content": "@@ -368,151 +368,82 @@\n def \n-maxPas(self):%0A        if self.pas%3E2:%0A            self.pas+=1%0A        if self.pas==2:%0A            print(%22fail: limite de pessoas atingido%22)%0A    \n+enter(self,increment:int)-%3ENone:%0A        self.pas+=increment%0A            %0A\n     \n@@ -813,16 +813,48 @@\n enter%22:%0A\n+            increment:int=int()%0A\n         \n",
+            "lines": "28"
+        },
+        {
+            "label": "2025-10-01_22-01-43",
+            "content": "@@ -898,23 +898,31 @@\n     car.\n-maxPas(\n+enter(increment\n )%0Amain()\n",
+            "lines": "29"
+        },
+        {
+            "label": "2025-10-01_22-02-08",
+            "content": "@@ -437,12 +437,22 @@\n     \n-else\n+if self.pas==2\n :%0A  \n",
+            "lines": "29"
+        },
+        {
+            "label": "2025-10-01_22-02-40",
+            "content": "@@ -437,22 +437,12 @@\n     \n-if self.pas==2\n+else\n :%0A  \n",
+            "lines": "29"
+        },
+        {
+            "label": "2025-10-01_22-03-26",
+            "content": "@@ -808,34 +808,32 @@\n nt(car)%0A        \n-el\n if args%5B0%5D==%22end\n@@ -861,18 +861,16 @@\n         \n-el\n if args%5B\n",
+            "lines": "29"
+        },
+        {
+            "label": "2025-10-01_22-05-21",
+            "content": "@@ -401,9 +401,9 @@\n .pas\n-%3C\n+%3E\n 2:%0A \n@@ -808,32 +808,34 @@\n nt(car)%0A        \n+el\n if args%5B0%5D==%22end\n@@ -855,32 +855,34 @@\n   break%0A        \n+el\n if args%5B0%5D==%22ent\n",
+            "lines": "29"
+        },
+        {
+            "label": "2025-10-01_22-07-56",
+            "content": "@@ -444,17 +444,18 @@\n self.pas\n-%3E\n+==\n 2:%0A     \n",
+            "lines": "29"
+        },
+        {
+            "label": "2025-10-01_22-08-48",
+            "content": "@@ -398,17 +398,16 @@\n elf.pas%3C\n-=\n 2:%0A     \n",
+            "lines": "29"
+        },
+        {
+            "label": "2025-10-01_22-09-47",
+            "content": "@@ -398,16 +398,17 @@\n elf.pas%3C\n+=\n 2:%0A     \n@@ -446,17 +446,16 @@\n elf.pas%3E\n-=\n 2:%0A     \n",
+            "lines": "29"
+        },
+        {
+            "label": "2025-10-01_22-10-12",
+            "content": "@@ -398,17 +398,16 @@\n elf.pas%3C\n-=\n 2:%0A     \n",
+            "lines": "29"
+        },
+        {
+            "label": "2025-10-01_22-10-20",
+            "content": "@@ -446,16 +446,17 @@\n elf.pas%3E\n+=\n 2:%0A     \n",
+            "lines": "29"
+        },
+        {
+            "label": "2025-10-01_22-10-25",
+            "content": "@@ -453,31 +453,8 @@\n %3E2:%0A\n-            self.pas=2%0A\n     \n",
+            "lines": "29"
+        },
+        {
+            "label": "2025-10-01_22-12-24",
+            "content": "@@ -543,190 +543,8 @@\n    %0A\n-    def maxLeave(self):%0A        if self.pas%3C=2:%0A            self.pas-=1%0A        if self.pas%3C0:%0A            self.pas=0%0A            print(%22fail: nao ha ninguem no carro%22)%0A            %0A\n def \n@@ -934,64 +934,8 @@\n s()%0A\n-        if args%5B0%5D==%22leave%22:%0A            car.maxLeave()%0A\n main\n",
+            "lines": "30"
+        },
+        {
+            "label": "2025-10-01_22-26-23",
+            "content": "@@ -712,125 +712,8 @@\n o%22)%0A\n-    %0A    def maxGas(self, increment:int)-%3Eint:%0A        if self.gas%3C100:%0A            self.gas+=increment%0A            %0A\n     \n@@ -1172,102 +1172,8 @@\n e()%0A\n-        if args%5B0%5D==%22fuel%22:%0A            increment:int=int()%0A            car.maxGas(increment)%0A\n main\n",
+            "lines": "39"
+        },
+        {
+            "label": "2025-10-01_22-28-30",
+            "content": "@@ -1338,16 +1338,22 @@\n ment:int\n+=int()\n %0A       \n",
+            "lines": "47"
+        },
+        {
+            "label": "2025-10-01_22-28-46",
+            "content": "@@ -1342,12 +1342,8 @@\n :int\n-=int\n %0A   \n",
+            "lines": "47"
+        },
+        {
+            "label": "2025-10-01_22-28-58",
+            "content": "@@ -754,12 +754,11 @@\n t)-%3E\n-None\n+int\n :%0A  \n@@ -1342,18 +1342,16 @@\n :int=int\n-()\n %0A       \n",
+            "lines": "47"
+        },
+        {
+            "label": "2025-10-01_22-29-16",
+            "content": "@@ -778,17 +778,17 @@\n f.gas%3C10\n-1\n+0\n :%0A      \n@@ -817,27 +817,8 @@\n ent%0A\n-            return%0A\n     \n",
+            "lines": "47"
+        },
+        {
+            "label": "2025-10-01_22-29-58",
+            "content": "@@ -817,24 +817,28 @@\n ent%0A        \n+    \n return%0A     \n",
+            "lines": "48"
+        },
+        {
+            "label": "2025-10-01_22-30-08",
+            "content": "@@ -750,19 +750,20 @@\n t:int)-%3E\n-int\n+None\n :%0A      \n",
+            "lines": "48"
+        },
+        {
+            "label": "2025-10-01_22-30-19",
+            "content": "@@ -1324,26 +1324,13 @@\n 0%5D==\n-f\n %22fuel\n- %7Bincrement%7D\n %22:%0A \n",
+            "lines": "48"
+        },
+        {
+            "label": "2025-10-01_22-31-31",
+            "content": "@@ -1328,26 +1328,25 @@\n f%22fuel %7B\n-car.maxGas\n+increment\n %7D%22:%0A    \n",
+            "lines": "48"
+        },
+        {
+            "label": "2025-10-01_22-31-51",
+            "content": "@@ -1324,13 +1324,27 @@\n 0%5D==\n+f\n %22fuel\n+ %7Bcar.maxGas%7D\n %22:%0A \n",
+            "lines": "48"
+        },
+        {
+            "label": "2025-10-01_22-33-50",
+            "content": "@@ -1362,15 +1362,8 @@\n int(\n-args%5B2%5D\n )%0A  \n",
+            "lines": "48"
+        },
+        {
+            "label": "2025-10-01_22-34-09",
+            "content": "@@ -767,27 +767,84 @@\n     \n-self.gas+=increment\n+if self.gas%3C101:%0A            self.gas+=increment%0A        return%0A            \n %0A   \n@@ -1324,26 +1324,13 @@\n 0%5D==\n-f\n %22fuel\n- %7Bincrement%7D\n %22:%0A \n@@ -1358,16 +1358,23 @@\n int=int(\n+args%5B2%5D\n )%0A      \n",
+            "lines": "48"
+        },
+        {
+            "label": "2025-10-01_22-38-10",
+            "content": "@@ -1267,13 +1267,26 @@\n 0%5D==\n+f\n %22fuel\n+ %7Bincrement%7D\n %22:%0A \n",
+            "lines": "45"
+        },
+        {
+            "label": "2025-10-01_22-38-25",
+            "content": "@@ -1267,26 +1267,13 @@\n 0%5D==\n-f\n %22fuel\n- %7Bincrement%7D\n %22:%0A \n@@ -1299,18 +1299,16 @@\n t:int=in\n-pu\n t()%0A    \n",
+            "lines": "45"
+        },
+        {
+            "label": "2025-10-01_22-38-45",
+            "content": "@@ -1263,16 +1263,17 @@\n rgs%5B0%5D==\n+f\n %22fuel %7Bi\n",
+            "lines": "45"
+        },
+        {
+            "label": "2025-10-01_22-38-50",
+            "content": "@@ -1313,20 +1313,15 @@\n int=\n-int(\n input()\n-)\n %0A   \n",
+            "lines": "45"
+        },
+        {
+            "label": "2025-10-01_22-39-04",
+            "content": "@@ -754,12 +754,11 @@\n t)-%3E\n-None\n+int\n :%0A  \n@@ -1309,23 +1309,28 @@\n ent:int=\n+int(\n input()\n+)\n %0A       \n",
+            "lines": "45"
+        },
+        {
+            "label": "2025-10-01_22-39-32",
+            "content": "@@ -1314,20 +1314,15 @@\n int=\n-int(\n input()\n-)\n %0A   \n",
+            "lines": "45"
+        },
+        {
+            "label": "2025-10-01_22-39-42",
+            "content": "@@ -364,21 +364,22 @@\n     def \n-Enter\n+maxPas\n (self):%0A\n@@ -547,16 +547,19 @@\n     def \n+max\n Leave(se\n@@ -756,25 +756,16 @@\n -%3ENone:%0A\n-        %0A\n         \n@@ -1183,13 +1183,14 @@\n car.\n-Enter\n+maxPas\n ()%0A \n@@ -1217,16 +1217,16 @@\n leave%22:%0A\n-\n         \n@@ -1233,16 +1233,19 @@\n     car.\n+max\n Leave()%0A\n",
+            "lines": "45"
+        },
+        {
+            "label": "2025-10-01_22-43-11",
+            "content": "@@ -919,16 +919,20 @@\n %0A    car\n+:Car\n =Car()%0A \n",
+            "lines": "46"
+        },
+        {
+            "label": "2025-10-01_22-43-29",
+            "content": "@@ -923,12 +923,8 @@\n  car\n-:Car\n =Car\n",
+            "lines": "46"
+        },
+        {
+            "label": "2025-10-01_22-43-44",
+            "content": "@@ -717,16 +717,19 @@\n     def \n+max\n Gas(self\n@@ -764,18 +764,8 @@\n     \n-maxGas=100\n %0A   \n@@ -793,64 +793,8 @@\n ent%0A\n-        if self.gas%3EmaxGas:%0A            self.gas=maxGas%0A\n     \n@@ -1270,16 +1270,28 @@\n %5D==%22fuel\n+ %7Bincrement%7D\n %22:%0A     \n@@ -1319,15 +1319,15 @@\n int(\n-args%5B1%5D\n+input()\n )%0A  \n@@ -1340,16 +1340,19 @@\n     car.\n+max\n Gas(incr\n",
+            "lines": "46"
+        },
+        {
+            "label": "2025-10-01_22-47-38",
+            "content": "@@ -397,16 +397,17 @@\n elf.pas%3C\n+=\n 2:%0A     \n@@ -425,37 +425,69 @@\n .pas+=1%0A        \n-else:\n+if self.pas%3E2:%0A            self.pas=2\n %0A            pri\n@@ -582,10 +582,11 @@\n .pas\n-%3E0\n+%3C=2\n :%0A  \n@@ -619,13 +619,45 @@\n     \n-else:\n+if self.pas%3C0:%0A            self.pas=0\n %0A   \n",
+            "lines": "48"
+        },
+        {
+            "label": "2025-10-01_22-49-00",
+            "content": "class Car:\n    def __init__(self): #Lembrete: essa daqui se chama construtor, os \"Parametros\" (requisitos de cria\u00e7\u00e3o) ficam dentro dos parenteses\n        self.pas:int=0\n        self.gas:int=0\n        self.km:int=0\n        \n    def __str__(self)->str: #Lembrete: essa daqui se chama ToString\n        return f\"pass: {self.pas}, gas: {self.gas}, km: {self.km}\"\n    \n    def Enter(self):\n        if self.pas<2:\n            self.pas+=1\n        else:\n            print(\"fail: limite de pessoas atingido\")\n            \n    def Leave(self):\n        if self.pas>0:\n            self.pas-=1\n        else:\n            print(\"fail: nao ha ninguem no carro\")\n    \n    def Gas(self, increment:int)->None:\n        maxGas=100\n        self.gas+=increment\n        if self.gas>maxGas:\n            self.gas=maxGas\n            \ndef main(): #Lembrete: esse \u00e9 o main, no qual n\u00f3s utilizamos pra interagir com o c\u00f3digo, o liga/desliga, etc.\n    car:Car=Car()\n    while True:\n        line:str=input()\n        print(\"$\"+line)\n        args:list[str]=line.split(\" \")\n        \n        if args[0]==\"show\":\n            print(car)\n        if args[0]==\"end\":\n            break\n        if args[0]==\"enter\":\n            car.Enter()\n        if args[0]==\"leave\":\n            car.Leave()\n        if args[0]==\"fuel\":\n            increment:int=int(args[1])\n            car.Gas(increment)\nmain()",
+            "lines": "46"
+        }
+    ]
+}
