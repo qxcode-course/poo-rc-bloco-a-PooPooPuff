@@ -297,8 +297,213 @@
         },
         {
             "label": "2025-10-01_22-49-00",
-            "content": "class Car:\n    def __init__(self): #Lembrete: essa daqui se chama construtor, os \"Parametros\" (requisitos de cria\u00e7\u00e3o) ficam dentro dos parenteses\n        self.pas:int=0\n        self.gas:int=0\n        self.km:int=0\n        \n    def __str__(self)->str: #Lembrete: essa daqui se chama ToString\n        return f\"pass: {self.pas}, gas: {self.gas}, km: {self.km}\"\n    \n    def Enter(self):\n        if self.pas<2:\n            self.pas+=1\n        else:\n            print(\"fail: limite de pessoas atingido\")\n            \n    def Leave(self):\n        if self.pas>0:\n            self.pas-=1\n        else:\n            print(\"fail: nao ha ninguem no carro\")\n    \n    def Gas(self, increment:int)->None:\n        maxGas=100\n        self.gas+=increment\n        if self.gas>maxGas:\n            self.gas=maxGas\n            \ndef main(): #Lembrete: esse \u00e9 o main, no qual n\u00f3s utilizamos pra interagir com o c\u00f3digo, o liga/desliga, etc.\n    car:Car=Car()\n    while True:\n        line:str=input()\n        print(\"$\"+line)\n        args:list[str]=line.split(\" \")\n        \n        if args[0]==\"show\":\n            print(car)\n        if args[0]==\"end\":\n            break\n        if args[0]==\"enter\":\n            car.Enter()\n        if args[0]==\"leave\":\n            car.Leave()\n        if args[0]==\"fuel\":\n            increment:int=int(args[1])\n            car.Gas(increment)\nmain()",
+            "content": "@@ -790,285 +790,8 @@\n Gas%0A\n-    %0A    def Km(self, increment:int)-%3ENone:%0A        if self.pas%3E1:%0A            print(%22fail: nao ha ninguem no carro%22)%0A            return%0A        elif self.gas%3E1:%0A            print(%22fail: tanque vazio%22)%0A            return%0A        self.km+=increment%0A        self.gas-=increment%0A%0A\n     \n@@ -1344,106 +1344,8 @@\n nt)%0A\n-        if args%5B0%5D==%22drive%22:%0A            increment:int=int(args%5B1%5D)%0A            car.Km(increment)%0A\n main\n",
             "lines": "46"
+        },
+        {
+            "label": "2025-10-04_19-50-32",
+            "content": "@@ -923,32 +923,34 @@\n  return%0A        \n+el\n if self.gas%3E1:%0A \n",
+            "lines": "60"
+        },
+        {
+            "label": "2025-10-04_19-50-53",
+            "content": "@@ -853,11 +853,10 @@\n .pas\n-%3C=0\n+%3E1\n :%0A  \n@@ -946,10 +946,10 @@\n .gas\n-%3C0\n+%3E1\n :%0A  \n",
+            "lines": "60"
+        },
+        {
+            "label": "2025-10-04_19-51-21",
+            "content": "@@ -834,63 +834,8 @@\n ne:%0A\n-        self.km+=increment%0A        self.gas-=increment%0A\n     \n@@ -854,16 +854,16 @@\n pas%3C=0:%0A\n+\n         \n@@ -1018,149 +1018,56 @@\n     \n-if self.gas%3Cself.km:%0A            self.km=self.km-self.gas%0A            print(F%22fail: tanque vazio apos andar %7Bself.km%7D km%22)%0A            return\n+self.km+=increment%0A        self.gas-=increment%0A%0A\n     \n@@ -1075,17 +1075,16 @@\n        %0A\n-%0A\n def main\n",
+            "lines": "60"
+        },
+        {
+            "label": "2025-10-04_19-53-47",
+            "content": "@@ -1069,18 +1069,16 @@\n         \n-el\n if self.\n",
+            "lines": "63"
+        },
+        {
+            "label": "2025-10-04_19-54-10",
+            "content": "@@ -1069,17 +1069,16 @@\n         \n-#\n elif sel\n@@ -1104,17 +1104,16 @@\n         \n-#\n self.km=\n@@ -1141,17 +1141,16 @@\n         \n-#\n print(F%22\n@@ -1206,17 +1206,16 @@\n         \n-#\n return  \n",
+            "lines": "63"
+        },
+        {
+            "label": "2025-10-04_19-54-58",
+            "content": "@@ -1060,16 +1060,178 @@\n   return\n+%0A        #elif self.gas%3Cself.km:%0A            #self.km=self.km-self.gas%0A            #print(F%22fail: tanque vazio apos andar %7Bself.km%7D km%22)%0A            #return      \n       %0A%0A\n",
+            "lines": "63"
+        },
+        {
+            "label": "2025-10-04_19-55-09",
+            "content": "@@ -822,32 +822,87 @@\n ent:int)-%3ENone:%0A\n+        self.km+=increment%0A        self.gas-=increment%0A\n         if self.\n@@ -1070,63 +1070,8 @@\n     \n-%0A        self.km+=increment%0A        self.gas-=increment\n %0A%0Ade\n",
+            "lines": "59"
+        },
+        {
+            "label": "2025-10-04_19-55-27",
+            "content": "@@ -1009,166 +1009,8 @@\n turn\n-%0A        elif self.gas%3Cself.km:%0A            self.km=self.km-self.gas%0A            print(F%22fail: tanque vazio apos andar %7Bself.km%7D km%22)%0A            return      \n     \n",
+            "lines": "59"
+        },
+        {
+            "label": "2025-10-04_19-55-56",
+            "content": "@@ -1006,32 +1006,34 @@\n  return%0A        \n+el\n if self.gas%3Cself\n@@ -1092,17 +1092,17 @@\n   print(\n-f\n+F\n %22fail: t\n",
+            "lines": "63"
+        },
+        {
+            "label": "2025-10-04_19-56-16",
+            "content": "@@ -1147,32 +1147,44 @@\n           return\n+            \n %0A        self.km\n",
+            "lines": "63"
+        },
+        {
+            "label": "2025-10-04_19-56-32",
+            "content": "@@ -998,32 +998,182 @@\n          return%0A\n+        if self.gas%3Cself.km:%0A            self.km=self.km-self.gas%0A            print(f%22fail: tanque vazio apos andar %7Bself.km%7D km%22)%0A            return%0A\n         self.km+\n",
+            "lines": "63"
+        },
+        {
+            "label": "2025-10-04_19-57-22",
+            "content": "@@ -1010,114 +1010,8 @@\n urn%0A\n-        if self.km%3Eself.gas:%0A            print(f%22fail: tanque vazio apos andar 50 km%22)%0A            return%0A\n     \n",
+            "lines": "59"
+        },
+        {
+            "label": "2025-10-04_19-58-28",
+            "content": "@@ -924,34 +924,32 @@\n  return%0A        \n-el\n if self.gas%3C0:%0A \n@@ -1014,18 +1014,16 @@\n         \n-el\n if self.\n",
+            "lines": "62"
+        },
+        {
+            "label": "2025-10-04_19-58-50",
+            "content": "@@ -924,32 +924,34 @@\n  return%0A        \n+el\n if self.gas%3C0:%0A \n@@ -949,16 +949,16 @@\n .gas%3C0:%0A\n-\n         \n@@ -1008,32 +1008,34 @@\n  return%0A        \n+el\n if self.km%3Eself.\n@@ -1097,16 +1097,35 @@\n 50 km%22)%0A\n+            return%0A\n         \n",
+            "lines": "62"
+        },
+        {
+            "label": "2025-10-04_19-59-33",
+            "content": "@@ -834,63 +834,8 @@\n ne:%0A\n-        self.gas-=increment%0A        self.km+=increment%0A\n     \n@@ -1092,16 +1092,71 @@\n  50 km%22)\n+%0A        self.km+=increment%0A        self.gas-=increment\n %0A%0Adef ma\n",
+            "lines": "61"
+        },
+        {
+            "label": "2025-10-04_20-00-05",
+            "content": "@@ -847,11 +847,12 @@\n elf.\n-km+\n+gas-\n =inc\n@@ -863,36 +863,35 @@\n nt%0A        self.\n-gas-\n+km+\n =increment%0A     \n",
+            "lines": "61"
+        },
+        {
+            "label": "2025-10-04_20-00-20",
+            "content": "@@ -1774,84 +1774,14 @@\n     \n-increment:int=int(args%5B2%5D)%0A            car.Km(increment)%0A            car.Gas\n+car.Km\n (inc\n",
+            "lines": "61"
+        },
+        {
+            "label": "2025-10-04_20-01-54",
+            "content": "@@ -1750,32 +1750,71 @@\n nt=int(args%5B1%5D)%0A\n+            increment:int=int(args%5B2%5D)%0A\n             car.\n",
+            "lines": "63"
+        },
+        {
+            "label": "2025-10-04_20-02-07",
+            "content": "@@ -1788,14 +1788,45 @@\n rement)%0A\n+            car.Gas(increment)%0A\n main()\n",
+            "lines": "62"
+        },
+        {
+            "label": "2025-10-04_20-02-18",
+            "content": "@@ -822,32 +822,87 @@\n ent:int)-%3ENone:%0A\n+        self.km+=increment%0A        self.gas-=increment%0A\n         if self.\n@@ -1151,63 +1151,8 @@\n km%22)\n-%0A        self.km+=increment%0A        self.gas-=increment\n %0A%0Ade\n",
+            "lines": "61"
+        },
+        {
+            "label": "2025-10-04_20-02-29",
+            "content": "@@ -1018,118 +1018,27 @@\n     \n-self.km+=increment%0A        self.gas-=increment%0A        if self.gas%3Cself.km:%0A            Kmmax=self.km-\n+if self.km%3E\n self.gas\n %0A   \n@@ -1033,16 +1033,17 @@\n self.gas\n+:\n %0A       \n@@ -1089,15 +1089,10 @@\n dar \n-%7BKmmax%7D\n+50\n  km%22\n@@ -1101,26 +1101,62 @@\n         \n-    return\n+self.km+=increment%0A        self.gas-=increment\n %0A%0Adef ma\n",
+            "lines": "61"
+        },
+        {
+            "label": "2025-10-04_20-04-07",
+            "content": "@@ -998,32 +998,87 @@\n          return%0A\n+        self.km+=increment%0A        self.gas-=increment%0A\n         if self.\n@@ -1210,63 +1210,8 @@\n turn\n-%0A        self.km+=increment%0A        self.gas-=increment\n %0A%0Ade\n",
+            "lines": "63"
+        },
+        {
+            "label": "2025-10-04_20-04-40",
+            "content": "@@ -1010,63 +1010,8 @@\n urn%0A\n-        self.km+=increment%0A        self.gas-=increment%0A\n     \n@@ -1026,17 +1026,16 @@\n elf.gas%3C\n-=\n self.km:\n@@ -1151,16 +1151,71 @@\n   return\n+%0A        self.km+=increment%0A        self.gas-=increment\n %0A%0Adef ma\n",
+            "lines": "63"
+        },
+        {
+            "label": "2025-10-04_20-05-02",
+            "content": "@@ -1118,19 +1118,19 @@\n elf.\n-gas\n+km\n -self.\n-km\n+gas\n %0A   \n",
+            "lines": "63"
+        },
+        {
+            "label": "2025-10-04_20-05-28",
+            "content": "@@ -799,21 +799,18 @@\n     def \n-Drive\n+Km\n (self, i\n@@ -1118,19 +1118,19 @@\n elf.\n-km\n+gas\n -self.\n-gas\n+km\n %0A   \n@@ -1838,13 +1838,10 @@\n car.\n-Drive\n+Km\n (inc\n",
+            "lines": "63"
+        },
+        {
+            "label": "2025-10-04_20-06-49",
+            "content": "@@ -1119,17 +1119,17 @@\n =self.km\n-+\n+-\n self.gas\n",
+            "lines": "63"
+        },
+        {
+            "label": "2025-10-04_20-09-54",
+            "content": "@@ -1001,32 +1001,87 @@\n          return%0A\n+        self.km+=increment%0A        self.gas-=increment%0A\n         if self.\n@@ -1214,63 +1214,8 @@\n turn\n-%0A        self.km+=increment%0A        self.gas-=increment\n %0A%0Ade\n",
+            "lines": "63"
+        },
+        {
+            "label": "2025-10-04_20-10-04",
+            "content": "@@ -1013,63 +1013,8 @@\n urn%0A\n-        self.km+=increment%0A        self.gas-=increment%0A\n     \n@@ -1029,16 +1029,17 @@\n elf.gas%3C\n+=\n self.km:\n@@ -1155,16 +1155,71 @@\n   return\n+%0A        self.km+=increment%0A        self.gas-=increment\n %0A%0Adef ma\n",
+            "lines": "63"
+        },
+        {
+            "label": "2025-10-04_20-10-21",
+            "content": "@@ -1120,19 +1120,19 @@\n elf.\n-gas\n+km\n +self.\n-km\n+gas\n %0A   \n",
+            "lines": "63"
+        },
+        {
+            "label": "2025-10-04_20-10-40",
+            "content": "@@ -1093,16 +1093,51 @@\n elf.km:%0A\n+            Kmmax=self.gas+self.km%0A\n         \n@@ -1179,24 +1179,21 @@\n  andar %7B\n-self.gas\n+Kmmax\n %7D km%22)%0A \n",
+            "lines": "63"
+        },
+        {
+            "label": "2025-10-04_20-12-37",
+            "content": "@@ -1001,32 +1001,87 @@\n          return%0A\n+        self.km+=increment%0A        self.gas-=increment%0A\n         if self.\n@@ -1175,73 +1175,14 @@\n     \n-self.gas=0%0A        self.km+=increment%0A        self.gas-=increment\n+return\n %0A%0Ade\n",
+            "lines": "62"
+        },
+        {
+            "label": "2025-10-04_20-13-08",
+            "content": "@@ -1131,41 +1131,8 @@\n s=0%0A\n-        if self.gas%3Eself.km:%0A    \n     \n@@ -1150,28 +1150,24 @@\n +=increment%0A\n-    \n         self\n",
+            "lines": "62"
+        },
+        {
+            "label": "2025-10-04_20-14-25",
+            "content": "@@ -1013,100 +1013,8 @@\n urn%0A\n-        if self.gas%3Eself.km:%0A            self.km+=increment%0A            self.gas-=increment%0A\n     \n@@ -1126,16 +1126,108 @@\n lf.gas=0\n+%0A        if self.gas%3Eself.km:%0A            self.km+=increment%0A            self.gas-=increment\n %0A%0Adef ma\n",
+            "lines": "63"
+        },
+        {
+            "label": "2025-10-04_20-14-35",
+            "content": "@@ -1113,43 +1113,28 @@\n     \n-else:%0A           \n+if\n  self.\n-km+=\n+gas%3C\n self.\n-gas\n+km:\n %0A   \n",
+            "lines": "63"
+        },
+        {
+            "label": "2025-10-04_20-15-38",
+            "content": "@@ -1029,17 +1029,16 @@\n elf.gas%3E\n-=\n self.km:\n",
+            "lines": "64"
+        },
+        {
+            "label": "2025-10-04_20-15-51",
+            "content": "@@ -1030,25 +1030,23 @@\n lf.gas%3E=\n-increment\n+self.km\n :%0A      \n",
+            "lines": "64"
+        },
+        {
+            "label": "2025-10-04_20-16-22",
+            "content": "@@ -947,17 +947,16 @@\n elf.gas%3C\n-=\n 0:%0A     \n",
+            "lines": "64"
+        },
+        {
+            "label": "2025-10-04_20-16-43",
+            "content": "@@ -947,16 +947,17 @@\n elf.gas%3C\n+=\n 0:%0A     \n",
+            "lines": "64"
+        },
+        {
+            "label": "2025-10-04_20-16-55",
+            "content": "@@ -946,18 +946,17 @@\n self.gas\n-==\n+%3C\n 0:%0A     \n",
+            "lines": "64"
+        },
+        {
+            "label": "2025-10-04_20-17-31",
+            "content": "@@ -852,17 +852,17 @@\n self.pas\n-=\n+%3C\n =0:%0A    \n",
+            "lines": "64"
+        },
+        {
+            "label": "2025-10-04_20-17-47",
+            "content": "class Car:\n    def __init__(self): #Lembrete: essa daqui se chama construtor, os \"Parametros\" (requisitos de cria\u00e7\u00e3o) ficam dentro dos parenteses\n        self.pas:int=0\n        self.gas:int=0\n        self.km:int=0\n        \n    def __str__(self)->str: #Lembrete: essa daqui se chama ToString\n        return f\"pass: {self.pas}, gas: {self.gas}, km: {self.km}\"\n    \n    def Enter(self):\n        if self.pas<2:\n            self.pas+=1\n        else:\n            print(\"fail: limite de pessoas atingido\")\n            \n    def Leave(self):\n        if self.pas>0:\n            self.pas-=1\n        else:\n            print(\"fail: nao ha ninguem no carro\")\n    \n    def Gas(self, increment:int)->None:\n        maxGas=100\n        self.gas+=increment\n        if self.gas>maxGas:\n            self.gas=maxGas\n    \n    def Drive(self, increment:int)->None:\n        if self.pas==0:\n            print(\"fail: nao ha ninguem no carro\")\n            return\n        if self.gas==0:\n            print(\"fail: tanque vazio\")\n            return\n        if self.gas>=increment:\n            self.km+=increment\n            self.gas-=increment\n        else:\n            self.km+=self.gas\n            print(f\"fail: tanque vazio apos andar {self.gas} km\")\n            self.gas=0\n\ndef main(): #Lembrete: esse \u00e9 o main, no qual n\u00f3s utilizamos pra interagir com o c\u00f3digo, o liga/desliga, etc.\n    car:Car=Car()\n    while True:\n        line:str=input()\n        print(\"$\"+line)\n        args:list[str]=line.split(\" \")\n        \n        if args[0]==\"show\":\n            print(car)\n        if args[0]==\"end\":\n            break\n        if args[0]==\"enter\":\n            car.Enter()\n        if args[0]==\"leave\":\n            car.Leave()\n        if args[0]==\"fuel\":\n            increment:int=int(args[1])\n            car.Gas(increment)\n        if args[0]==\"drive\":\n            increment:int=int(args[1])\n            car.Drive(increment)\nmain()",
+            "lines": "64"
         }
     ]
 }

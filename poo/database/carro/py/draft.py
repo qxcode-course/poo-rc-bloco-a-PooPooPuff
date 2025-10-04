@@ -24,7 +24,22 @@ class Car:
         self.gas+=increment
         if self.gas>maxGas:
             self.gas=maxGas
-            
+    
+    def Drive(self, increment:int)->None:
+        if self.pas==0:
+            print("fail: nao ha ninguem no carro")
+            return
+        if self.gas==0:
+            print("fail: tanque vazio")
+            return
+        if self.gas>=increment:
+            self.km+=increment
+            self.gas-=increment
+        else:
+            self.km+=self.gas
+            print(f"fail: tanque vazio apos andar {self.gas} km")
+            self.gas=0
+
 def main(): #Lembrete: esse é o main, no qual nós utilizamos pra interagir com o código, o liga/desliga, etc.
     car:Car=Car()
     while True:
@@ -43,4 +58,7 @@ def main(): #Lembrete: esse é o main, no qual nós utilizamos pra interagir com
         if args[0]=="fuel":
             increment:int=int(args[1])
             car.Gas(increment)
+        if args[0]=="drive":
+            increment:int=int(args[1])
+            car.Drive(increment)
 main()

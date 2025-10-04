@@ -8,9 +8,6 @@ class Animal:
         return f"{self.specie}:{self.age}:{self.sound}"
 
     def ageBy(self, increment:int)->None:
-       if self.age==4:
-        print(f"warning: {self.specie} morreu")
-        return
        self.age+=increment
        if self.age>=4:
            self.age=4
@@ -19,11 +16,7 @@ class Animal:
     def makeSound(self)->str:
         if self.age==0:
             return "---"
-        if self.age==1:
-            return self.sound
-        if self.age==2:
-            return self.sound
-        if self.age==3:
+        if self.age>0 and self.age<4:
             return self.sound
         if self.age==4:
             return "RIP"
