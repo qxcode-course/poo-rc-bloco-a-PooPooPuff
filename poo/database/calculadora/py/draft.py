@@ -11,9 +11,23 @@ class Calculator:
         self.battery+=increment
         if self.battery>self.batteryMax:
             self.battery=self.batteryMax
+    
+    def Sum(self, num1:float, num2:float)->None:
+        if self.battery==0:
+            print("fail: bateria insuficiente")
+            return
+        self.display=num1+num2
+        self.battery-=1
+    
+    def Div(self, num1:float, num2:float)->None:
+        if self.battery==0:
+            print("fail: bateria insuficiente")
+            return
+        self.display=num1//num2
+        self.battery-=1
         
 def main():
-    calculator:Calculator=Calculator("")
+    calculator:Calculator=None
     while True:
         line:str=input()
         print("$"+line)
@@ -29,5 +43,13 @@ def main():
             calculator.Charge(increment)
         if args[0]=="show":
             print(calculator)
+        if args[0]=="sum":
+            num1:float=float(args[1])
+            num2:float=float(args[2])
+            calculator.Sum(num1,num2)
+        if args[0]=="div":
+            num1:float=float(args[1])
+            num2:float=float(args[2])
+            calculator.Div(num1,num2)
 
 main()

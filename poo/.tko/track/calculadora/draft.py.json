@@ -142,8 +142,63 @@
         },
         {
             "label": "2025-10-04_20-58-10",
-            "content": "class Calculator:\n    def __init__(self,batteryMax:int):\n        self.batteryMax:int=batteryMax\n        self.battery:int=0\n        self.display:float=0.0\n    \n    def __str__(self):\n        return (f\"display = {self.display:.2f}, battery = {self.battery}\")\n    \n    def Charge(self, increment:int)->None:\n        self.battery+=increment\n        if self.battery>self.batteryMax:\n            self.battery=self.batteryMax\n        \ndef main():\n    calculator:Calculator=Calculator(\"\")\n    while True:\n        line:str=input()\n        print(\"$\"+line)\n        args:list[str]=line.split(\" \")   \n        \n        if args[0]==\"end\":\n            break\n        if args[0]==\"init\":\n            batteryMax:int=int(args[1])\n            calculator=Calculator(batteryMax)\n        if args[0]==\"charge\":\n            increment:int=int(args[1])\n            calculator.Charge(increment)\n        if args[0]==\"show\":\n            print(calculator)\n\nmain()",
+            "content": "@@ -416,93 +416,8 @@\n Max%0A\n-    %0A    def Sum(self, num1:float, num2:float)-%3ENone:%0A        self.display=num1+num2%0A\n     \n@@ -920,149 +920,8 @@\n tor)\n-%0A        if args%5B0%5D==%22sum%22:%0A            num1:float=float(args%5B1%5D)%0A            num2:float=float(args%5B2%5D)%0A            calculator.Sum(num1,num2)\n %0A%0Ama\n",
             "lines": "33"
+        },
+        {
+            "label": "2025-10-05_12-25-05",
+            "content": "@@ -501,32 +501,8 @@\n um2%0A\n-        self.battery-=1%0A\n     \n",
+            "lines": "40"
+        },
+        {
+            "label": "2025-10-05_12-25-22",
+            "content": "@@ -470,84 +470,8 @@\n ne:%0A\n-        if self.battery==0:%0A            print(%22fail: bateria insuficiente%22)%0A\n     \n",
+            "lines": "41"
+        },
+        {
+            "label": "2025-10-05_12-26-07",
+            "content": "@@ -570,14 +570,14 @@\n =num\n-2\n+1\n +num\n-1\n+2\n %0A   \n",
+            "lines": "43"
+        },
+        {
+            "label": "2025-10-05_12-27-16",
+            "content": "@@ -546,27 +546,8 @@\n e%22)%0A\n-            return%0A\n     \n@@ -570,14 +570,14 @@\n =num\n-1\n+2\n +num\n-2\n+1\n %0A   \n@@ -644,20 +644,30 @@\n culator=\n-None\n+Calculator(%22%22)\n %0A    whi\n",
+            "lines": "43"
+        },
+        {
+            "label": "2025-10-05_12-31-42",
+            "content": "@@ -542,16 +542,35 @@\n iente%22)%0A\n+            return%0A\n         \n",
+            "lines": "44"
+        },
+        {
+            "label": "2025-10-05_12-32-00",
+            "content": "@@ -546,27 +546,8 @@\n e%22)%0A\n-            return%0A\n     \n",
+            "lines": "43"
+        },
+        {
+            "label": "2025-10-05_12-32-49",
+            "content": "@@ -620,212 +620,8 @@\n -=1%0A\n-    %0A    def Div(self, num1:float, num2:float)-%3ENone:%0A        if self.battery==0:%0A            print(%22fail: bateria insuficiente%22)%0A            return%0A        self.display=num1/num2%0A        self.battery-=1%0A\n     \n@@ -1255,149 +1255,8 @@\n um2)\n-%0A        if args%5B0%5D==%22div%22:%0A            num1:float=float(args%5B1%5D)%0A            num2:float=float(args%5B2%5D)%0A            calculator.Div(num1,num2)\n %0A%0Ama\n",
+            "lines": "44"
+        },
+        {
+            "label": "2025-10-05_12-34-29",
+            "content": "@@ -769,99 +769,8 @@\n urn%0A\n-        if num1 or num2==0:%0A            print(%22fail: divisao por zero%22)%0A            return%0A\n     \n",
+            "lines": "55"
+        },
+        {
+            "label": "2025-10-05_12-35-41",
+            "content": "@@ -757,32 +757,123 @@\n          return%0A\n+        if num1 or num2==0:%0A            print(%22fail: divisao por zero%22)%0A            return%0A\n         self.dis\n",
+            "lines": "58"
+        },
+        {
+            "label": "2025-10-05_12-35-56",
+            "content": "@@ -791,17 +791,16 @@\n ay=num1/\n-/\n num2%0A   \n",
+            "lines": "55"
+        },
+        {
+            "label": "2025-10-05_12-36-02",
+            "content": "class Calculator:\n    def __init__(self,batteryMax:int):\n        self.batteryMax:int=batteryMax\n        self.battery:int=0\n        self.display:float=0.0\n    \n    def __str__(self):\n        return (f\"display = {self.display:.2f}, battery = {self.battery}\")\n    \n    def Charge(self, increment:int)->None:\n        self.battery+=increment\n        if self.battery>self.batteryMax:\n            self.battery=self.batteryMax\n    \n    def Sum(self, num1:float, num2:float)->None:\n        if self.battery==0:\n            print(\"fail: bateria insuficiente\")\n            return\n        self.display=num1+num2\n        self.battery-=1\n    \n    def Div(self, num1:float, num2:float)->None:\n        if self.battery==0:\n            print(\"fail: bateria insuficiente\")\n            return\n        self.display=num1//num2\n        self.battery-=1\n        \ndef main():\n    calculator:Calculator=None\n    while True:\n        line:str=input()\n        print(\"$\"+line)\n        args:list[str]=line.split(\" \")   \n        \n        if args[0]==\"end\":\n            break\n        if args[0]==\"init\":\n            batteryMax:int=int(args[1])\n            calculator=Calculator(batteryMax)\n        if args[0]==\"charge\":\n            increment:int=int(args[1])\n            calculator.Charge(increment)\n        if args[0]==\"show\":\n            print(calculator)\n        if args[0]==\"sum\":\n            num1:float=float(args[1])\n            num2:float=float(args[2])\n            calculator.Sum(num1,num2)\n        if args[0]==\"div\":\n            num1:float=float(args[1])\n            num2:float=float(args[2])\n            calculator.Div(num1,num2)\n\nmain()",
+            "lines": "55"
         }
     ]
 }
