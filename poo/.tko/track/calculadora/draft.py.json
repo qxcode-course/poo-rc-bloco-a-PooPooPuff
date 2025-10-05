@@ -197,8 +197,78 @@
         },
         {
             "label": "2025-10-05_12-36-02",
-            "content": "class Calculator:\n    def __init__(self,batteryMax:int):\n        self.batteryMax:int=batteryMax\n        self.battery:int=0\n        self.display:float=0.0\n    \n    def __str__(self):\n        return (f\"display = {self.display:.2f}, battery = {self.battery}\")\n    \n    def Charge(self, increment:int)->None:\n        self.battery+=increment\n        if self.battery>self.batteryMax:\n            self.battery=self.batteryMax\n    \n    def Sum(self, num1:float, num2:float)->None:\n        if self.battery==0:\n            print(\"fail: bateria insuficiente\")\n            return\n        self.display=num1+num2\n        self.battery-=1\n    \n    def Div(self, num1:float, num2:float)->None:\n        if self.battery==0:\n            print(\"fail: bateria insuficiente\")\n            return\n        self.display=num1//num2\n        self.battery-=1\n        \ndef main():\n    calculator:Calculator=None\n    while True:\n        line:str=input()\n        print(\"$\"+line)\n        args:list[str]=line.split(\" \")   \n        \n        if args[0]==\"end\":\n            break\n        if args[0]==\"init\":\n            batteryMax:int=int(args[1])\n            calculator=Calculator(batteryMax)\n        if args[0]==\"charge\":\n            increment:int=int(args[1])\n            calculator.Charge(increment)\n        if args[0]==\"show\":\n            print(calculator)\n        if args[0]==\"sum\":\n            num1:float=float(args[1])\n            num2:float=float(args[2])\n            calculator.Sum(num1,num2)\n        if args[0]==\"div\":\n            num1:float=float(args[1])\n            num2:float=float(args[2])\n            calculator.Div(num1,num2)\n\nmain()",
+            "content": "@@ -791,16 +791,17 @@\n ay=num1/\n+/\n num2%0A   \n",
             "lines": "55"
+        },
+        {
+            "label": "2025-10-05_16-31-05",
+            "content": "@@ -565,83 +565,8 @@\n urn%0A\n-        if num1==0 or num2==0:%0A            print(%22fail: divisao por zero%22)%0A\n     \n",
+            "lines": "55"
+        },
+        {
+            "label": "2025-10-05_16-32-04",
+            "content": "@@ -636,35 +636,16 @@\n  zero%22)%0A\n-            return%0A\n         \n",
+            "lines": "57"
+        },
+        {
+            "label": "2025-10-05_16-32-11",
+            "content": "@@ -553,32 +553,126 @@\n          return%0A\n+        if num1==0 or num2==0:%0A            print(%22fail: divisao por zero%22)%0A            return%0A\n         self.dis\n@@ -863,102 +863,8 @@\n urn%0A\n-        if num1==0 or num2==0:%0A            print(%22fail: divisao por zero%22)%0A            return%0A\n     \n",
+            "lines": "58"
+        },
+        {
+            "label": "2025-10-05_16-34-04",
+            "content": "@@ -470,63 +470,8 @@\n ne:%0A\n-        self.display=num1+num2%0A        self.battery-=1%0A\n     \n@@ -569,112 +569,112 @@\n     \n-%0A\n     \n-def Div(self, num1:float, num2:float)-%3ENone:%0A        self.display=num1/num2\n+self.display=num1+num2%0A        self.battery-=1\n %0A    \n+%0A\n     \n-self.battery-=1\n+def Div(self, num1:float, num2:float)-%3ENone:\n %0A   \n@@ -851,32 +851,87 @@\n          return%0A\n+        self.display=num1/num2%0A        self.battery-=1%0A\n         %0Adef mai\n",
+            "lines": "58"
+        },
+        {
+            "label": "2025-10-05_16-39-49",
+            "content": "@@ -458,32 +458,87 @@\n 2:float)-%3ENone:%0A\n+        self.display=num1+num2%0A        self.battery-=1%0A\n         if self.\n@@ -624,112 +624,112 @@\n     \n+%0A\n     \n-self.display=num1+num2%0A        self.battery-=1\n+def Div(self, num1:float, num2:float)-%3ENone:%0A        self.display=num1/num2\n %0A    \n-%0A\n     \n-def Div(self, num1:float, num2:float)-%3ENone:\n+self.battery-=1\n %0A   \n@@ -918,63 +918,8 @@\n urn%0A\n-        self.display=num1/num2%0A        self.battery-=1%0A\n     \n",
+            "lines": "58"
+        },
+        {
+            "label": "2025-10-05_16-40-08",
+            "content": "@@ -863,26 +863,8 @@\n urn%0A\n-        else:%0A    \n     \n@@ -886,28 +886,24 @@\n y=num1/num2%0A\n-    \n         self\n",
+            "lines": "58"
+        },
+        {
+            "label": "2025-10-05_16-40-32",
+            "content": "@@ -561,34 +561,16 @@\n  return%0A\n-        else:%0A    \n         \n@@ -588,28 +588,24 @@\n y=num1+num2%0A\n-    \n         self\n",
+            "lines": "59"
+        },
+        {
+            "label": "2025-10-05_16-40-58",
+            "content": "@@ -23,19 +23,22 @@\n def \n+__\n init\n+__\n (self,\n- \n batt\n@@ -44,17 +44,16 @@\n teryMax:\n- \n int):%0A  \n@@ -74,23 +74,20 @@\n teryMax:\n- \n int\n- = \n+=\n batteryM\n@@ -106,59 +106,57 @@\n elf.\n-display: float = 0.0%0A        self.battery: int = 0%0A\n+battery:int=0%0A        self.display:float=0.0%0A    \n %0A   \n@@ -164,24 +164,21 @@\n def \n+__\n str\n+__\n (self)\n- -%3E str\n :%0A  \n@@ -190,16 +190,17 @@\n  return \n+(\n f%22displa\n@@ -248,17 +248,22 @@\n attery%7D%22\n-%0A\n+)%0A    \n %0A    def\n@@ -263,17 +263,17 @@\n     def \n-c\n+C\n harge(se\n@@ -280,23 +280,24 @@\n lf, \n-value: \n+increment:\n int)\n- \n -%3E\n- \n None\n@@ -322,17 +322,19 @@\n tery\n- \n +=\n- value\n+increment\n %0A   \n@@ -357,11 +357,9 @@\n tery\n- %3E \n+%3E\n self\n@@ -395,19 +395,17 @@\n .battery\n- = \n+=\n self.bat\n@@ -412,16 +412,20 @@\n teryMax%0A\n+    \n %0A    def\n@@ -425,17 +425,17 @@\n     def \n-s\n+S\n um(self,\n@@ -439,31 +439,33 @@\n lf, \n-a: \n+num1:\n float, \n-b: \n+num2:\n float)\n- \n -%3E\n- \n None\n@@ -481,36 +481,34 @@\n  if self.battery\n- \n ==\n- \n 0:%0A            p\n@@ -534,32 +534,51 @@\n  insuficiente%22)%0A\n+            return%0A\n         else:%0A  \n@@ -603,16 +603,18 @@\n play\n- = a + b\n+=num1+num2\n %0A   \n@@ -634,22 +634,24 @@\n .battery\n- \n -=\n- \n 1%0A\n+    \n %0A    def\n@@ -655,28 +655,23 @@\n def \n-d\n+D\n iv\n-ision\n (self, \n-den: \n+num1:\n floa\n@@ -680,20 +680,18 @@\n  num\n+2\n :\n- \n float)\n- \n -%3E\n- \n None\n@@ -715,20 +715,18 @@\n .battery\n- \n ==\n- \n 0:%0A     \n@@ -780,83 +780,44 @@\n     \n-elif den == 0:%0A            self.battery -= 1%0A            if den \n+    return%0A        if num1\n ==\n- \n 0 or num\n  == \n@@ -816,19 +816,14 @@\n  num\n- \n+2\n ==\n- \n 0:%0A\n-    \n     \n@@ -870,36 +870,45 @@\n             \n-else:\n+return\n %0A      \n+  else:%0A\n           se\n@@ -897,32 +897,34 @@\n else:%0A          \n+  \n self.display = d\n@@ -923,19 +923,55 @@\n play\n- = den/num%0A\n+=num1/num2%0A            self.battery-=1%0A        \n %0Adef\n@@ -994,17 +994,16 @@\n culator:\n- \n Calculat\n@@ -1008,17 +1008,14 @@\n ator\n- = \n+=\n None%0A\n-%0A\n     \n@@ -1043,15 +1043,12 @@\n ine:\n- \n str\n- = \n+=\n inpu\n@@ -1072,11 +1072,9 @@\n (%22$%22\n- + \n++\n line\n@@ -1088,17 +1088,16 @@\n    args:\n- \n list%5Bstr\n@@ -1097,19 +1097,17 @@\n ist%5Bstr%5D\n- = \n+=\n line.spl\n@@ -1113,17 +1113,28 @@\n lit(%22 %22)\n-%0A\n+   %0A        \n %0A       \n@@ -1144,20 +1144,18 @@\n  args%5B0%5D\n- \n ==\n- \n %22end%22:%0A \n@@ -1171,34 +1171,32 @@\n   break%0A        \n-el\n if args%5B0%5D == %22i\n@@ -1189,20 +1189,18 @@\n  args%5B0%5D\n- \n ==\n- \n %22init%22:%0A\n@@ -1222,23 +1222,20 @@\n teryMax:\n- \n int\n- = \n+=\n int(args\n@@ -1261,19 +1261,17 @@\n lculator\n- = \n+=\n Calculat\n@@ -1285,34 +1285,32 @@\n eryMax)%0A        \n-el\n if args%5B0%5D == %22c\n@@ -1303,20 +1303,18 @@\n  args%5B0%5D\n- \n ==\n- \n %22charge%22\n@@ -1331,21 +1331,22 @@\n     \n-value: int = \n+increment:int=\n int(\n@@ -1381,20 +1381,82 @@\n tor.\n-c\n+C\n harge(\n-value\n+increment)%0A        if args%5B0%5D==%22show%22:%0A            print(calculator\n )%0A  \n@@ -1453,34 +1453,32 @@\n ulator)%0A        \n-el\n if args%5B0%5D == %22s\n@@ -1471,20 +1471,18 @@\n  args%5B0%5D\n- \n ==\n- \n %22sum%22:%0A \n@@ -1496,19 +1496,19 @@\n     \n-a: \n+num1:\n float\n- = \n+=\n floa\n@@ -1534,19 +1534,19 @@\n     \n-b: \n+num2:\n float\n- = \n+=\n floa\n@@ -1583,16 +1583,21 @@\n tor.\n-sum(a, b\n+Sum(num1,num2\n )%0A  \n@@ -1594,34 +1594,32 @@\n 1,num2)%0A        \n-el\n if args%5B0%5D == %22d\n@@ -1616,21 +1616,14 @@\n s%5B0%5D\n- \n ==\n- \n %22div\n-ision\n %22:%0A \n@@ -1637,21 +1637,19 @@\n     \n-den: \n+num1:\n float\n- = \n+=\n floa\n@@ -1678,18 +1678,16 @@\n  num\n+2\n :\n- \n float\n- = \n+=\n floa\n@@ -1724,86 +1724,21 @@\n tor.\n-division(den,num)%0A        elif args%5B0%5D == %22show%22:%0A            print(calculator\n+Div(num1,num2\n )%0A%0Am\n",
+            "lines": "60"
+        },
+        {
+            "label": "2025-10-05_16-51-09",
+            "content": "@@ -23,22 +23,19 @@\n def \n-__\n init\n-__\n (self,\n+ \n batt\n@@ -41,16 +41,17 @@\n teryMax:\n+ \n int):%0A  \n@@ -72,20 +72,23 @@\n teryMax:\n+ \n int\n-=\n+ = \n batteryM\n@@ -107,57 +107,59 @@\n elf.\n-battery:int=0%0A        self.display:float=0.0%0A    \n+display: float = 0.0%0A        self.battery: int = 0%0A\n %0A   \n@@ -167,21 +167,24 @@\n def \n-__\n str\n-__\n (self)\n+ -%3E str\n :%0A  \n@@ -196,17 +196,16 @@\n  return \n-(\n f%22displa\n@@ -253,22 +253,17 @@\n attery%7D%22\n-)%0A    \n+%0A\n %0A    def\n@@ -263,17 +263,17 @@\n     def \n-C\n+c\n harge(se\n@@ -280,24 +280,23 @@\n lf, \n-increment:\n+value: \n int)\n+ \n -%3E\n+ \n None\n@@ -321,19 +321,17 @@\n tery\n+ \n +=\n-increment\n+ value\n %0A   \n@@ -350,17 +350,19 @@\n .battery\n-%3E\n+ %3E \n self.bat\n@@ -394,17 +394,19 @@\n .battery\n-=\n+ = \n self.bat\n@@ -413,20 +413,16 @@\n teryMax%0A\n-    \n %0A    def\n@@ -422,17 +422,17 @@\n     def \n-S\n+s\n um(self,\n@@ -436,33 +436,31 @@\n lf, \n-num1:\n+a: \n float, \n-num2:\n+b: \n float)\n+ \n -%3E\n+ \n None\n@@ -476,34 +476,36 @@\n  if self.battery\n+ \n ==\n+ \n 0:%0A            p\n@@ -539,35 +539,16 @@\n iente%22)%0A\n-            return%0A\n         \n@@ -581,18 +581,16 @@\n play\n-=num1+num2\n+ = a + b\n %0A   \n@@ -610,24 +610,22 @@\n .battery\n+ \n -=\n+ \n 1%0A\n-    \n %0A    def\n@@ -629,23 +629,28 @@\n def \n-D\n+d\n iv\n+ision\n (self, \n-num1:\n+den: \n floa\n@@ -659,18 +659,20 @@\n  num\n-2\n :\n+ \n float)\n+ \n -%3E\n+ \n None\n@@ -696,18 +696,20 @@\n .battery\n+ \n ==\n+ \n 0:%0A     \n@@ -763,44 +763,83 @@\n     \n-    return%0A        if num1\n+elif den == 0:%0A            self.battery -= 1%0A            if den \n ==\n+ \n 0 or num\n 2==0\n@@ -838,14 +838,19 @@\n  num\n-2\n+ \n ==\n+ \n 0:%0A\n+    \n     \n@@ -897,23 +897,8 @@\n     \n-        return%0A\n     \n@@ -911,32 +911,36 @@\n se:%0A            \n+    \n self.display=num\n@@ -939,55 +939,19 @@\n play\n-=num1/num2%0A            self.battery-=1%0A        \n+ = den/num%0A\n %0Adef\n@@ -974,16 +974,17 @@\n culator:\n+ \n Calculat\n@@ -989,14 +989,17 @@\n ator\n-=\n+ = \n None%0A\n+%0A\n     \n@@ -1027,12 +1027,15 @@\n ine:\n+ \n str\n-=\n+ = \n inpu\n@@ -1055,17 +1055,19 @@\n rint(%22$%22\n-+\n+ + \n line)%0A  \n@@ -1077,16 +1077,17 @@\n    args:\n+ \n list%5Bstr\n@@ -1087,17 +1087,19 @@\n ist%5Bstr%5D\n-=\n+ = \n line.spl\n@@ -1105,28 +1105,17 @@\n lit(%22 %22)\n-   %0A        \n+%0A\n %0A       \n@@ -1125,18 +1125,20 @@\n  args%5B0%5D\n+ \n ==\n+ \n %22end%22:%0A \n@@ -1154,32 +1154,34 @@\n   break%0A        \n+el\n if args%5B0%5D==%22ini\n@@ -1174,18 +1174,20 @@\n  args%5B0%5D\n+ \n ==\n+ \n %22init%22:%0A\n@@ -1209,20 +1209,23 @@\n teryMax:\n+ \n int\n-=\n+ = \n int(args\n@@ -1251,17 +1251,19 @@\n lculator\n-=\n+ = \n Calculat\n@@ -1277,32 +1277,34 @@\n eryMax)%0A        \n+el\n if args%5B0%5D==%22cha\n@@ -1297,18 +1297,20 @@\n  args%5B0%5D\n+ \n ==\n+ \n %22charge%22\n@@ -1327,22 +1327,21 @@\n     \n-increment:int=\n+value: int = \n int(\n@@ -1376,82 +1376,20 @@\n tor.\n-C\n+c\n harge(\n-increment)%0A        if args%5B0%5D==%22show%22:%0A            print(calculator\n+value\n )%0A  \n@@ -1386,32 +1386,34 @@\n (value)%0A        \n+el\n if args%5B0%5D==%22sum\n@@ -1406,18 +1406,20 @@\n  args%5B0%5D\n+ \n ==\n+ \n %22sum%22:%0A \n@@ -1425,35 +1425,35 @@\n             \n-num1:\n+a: \n float\n-=\n+ = \n float(args%5B1\n@@ -1463,35 +1463,35 @@\n             \n-num2:\n+b: \n float\n-=\n+ = \n float(args%5B2\n@@ -1520,21 +1520,16 @@\n tor.\n-Sum(num1,num2\n+sum(a, b\n )%0A  \n@@ -1526,32 +1526,34 @@\n m(a, b)%0A        \n+el\n if args%5B0%5D==%22div\n@@ -1550,14 +1550,21 @@\n s%5B0%5D\n+ \n ==\n+ \n %22div\n+ision\n %22:%0A \n@@ -1578,19 +1578,21 @@\n     \n-num1:\n+den: \n float\n-=\n+ = \n floa\n@@ -1621,16 +1621,18 @@\n  num\n-2\n :\n+ \n float\n-=\n+ = \n floa\n@@ -1669,21 +1669,86 @@\n tor.\n-Div(num1,num2\n+division(den,num)%0A        elif args%5B0%5D == %22show%22:%0A            print(calculator\n )%0A%0Am\n",
+            "lines": "59"
+        },
+        {
+            "label": "2025-10-05_16-56-06",
+            "content": "@@ -798,16 +798,27 @@\n      if \n+num1==0 or \n num2==0:\n",
+            "lines": "60"
+        },
+        {
+            "label": "2025-10-05_16-59-38",
+            "content": "@@ -855,36 +855,8 @@\n o%22)%0A\n-            self.battery-=1%0A\n     \n",
+            "lines": "60"
+        },
+        {
+            "label": "2025-10-05_17-08-12",
+            "content": "@@ -851,16 +851,44 @@\n  zero%22)%0A\n+            self.battery-=1%0A\n         \n",
+            "lines": "61"
+        },
+        {
+            "label": "2025-10-05_17-08-27",
+            "content": "@@ -855,36 +855,8 @@\n o%22)%0A\n-            self.battery-=1%0A\n     \n",
+            "lines": "60"
+        },
+        {
+            "label": "2025-10-05_17-08-55",
+            "content": "class Calculator:\n    def __init__(self,batteryMax:int):\n        self.batteryMax:int=batteryMax\n        self.battery:int=0\n        self.display:float=0.0\n    \n    def __str__(self):\n        return (f\"display = {self.display:.2f}, battery = {self.battery}\")\n    \n    def Charge(self, increment:int)->None:\n        self.battery+=increment\n        if self.battery>self.batteryMax:\n            self.battery=self.batteryMax\n    \n    def Sum(self, num1:float, num2:float)->None:\n        if self.battery==0:\n            print(\"fail: bateria insuficiente\")\n            return\n        else:\n            self.display=num1+num2\n            self.battery-=1\n    \n    def Div(self, num1:float, num2:float)->None:\n        if self.battery==0:\n            print(\"fail: bateria insuficiente\")\n            return\n        if num2==0:\n            print(\"fail: divisao por zero\")\n            self.battery-=1\n            return\n        else:\n            self.display=num1/num2\n            self.battery-=1\n        \ndef main():\n    calculator:Calculator=None\n    while True:\n        line:str=input()\n        print(\"$\"+line)\n        args:list[str]=line.split(\" \")   \n        \n        if args[0]==\"end\":\n            break\n        if args[0]==\"init\":\n            batteryMax:int=int(args[1])\n            calculator=Calculator(batteryMax)\n        if args[0]==\"charge\":\n            increment:int=int(args[1])\n            calculator.Charge(increment)\n        if args[0]==\"show\":\n            print(calculator)\n        if args[0]==\"sum\":\n            num1:float=float(args[1])\n            num2:float=float(args[2])\n            calculator.Sum(num1,num2)\n        if args[0]==\"div\":\n            num1:float=float(args[1])\n            num2:float=float(args[2])\n            calculator.Div(num1,num2)\n\nmain()",
+            "lines": "61"
         }
     ]
 }

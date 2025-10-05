@@ -16,15 +16,21 @@ class Calculator:
         if self.battery==0:
             print("fail: bateria insuficiente")
             return
-        self.display=num1+num2
-        self.battery-=1
+        else:
+            self.display=num1+num2
+            self.battery-=1
     
     def Div(self, num1:float, num2:float)->None:
         if self.battery==0:
             print("fail: bateria insuficiente")
             return
-        self.display=num1//num2
-        self.battery-=1
+        if num2==0:
+            print("fail: divisao por zero")
+            self.battery-=1
+            return
+        else:
+            self.display=num1/num2
+            self.battery-=1
         
 def main():
     calculator:Calculator=None
