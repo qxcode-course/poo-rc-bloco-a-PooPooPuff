@@ -9,19 +9,21 @@ expanded:
 - campanha-principal
 - bloco_b-modificadores-de-acesso
 - bloco_b-agregação-simples
-- bloco_b-primeiras-classes
 - bloco_b-modificadores-de-acesso
 - bloco_b-agregação-simples
+- bloco_b-primeiras-classes
 tasks:
-  toalha: '{rate:100, human:2, alone:4, study:60}'
-  animal: '{rate:100, human:1, alone:6, study:100}'
-  carro: '{rate:100, iagen:2, alone:10, study:240}'
-  calculadora: '{rate:100}'
+  toalha: '{rate:100, human:Professor_em_aula, alone:4, study:60}'
+  animal: '{rate:100, human:perguntando_pra_amigos_a_logica_de_algumas_funcoes, alone:6,
+    study:100}'
+  carro: '{rate:100, iagen:gpt_pra_corrigir_a_questao_e_explicar_algumas_logicas,
+    alone:10, study:240}'
+  calculadora: '{rate:100, alone:10, study:90}'
   enxugar: '{rate:100, alone:10, study:40}'
 flags:
   quests: 0
   tracks: 0
   tasks: 0
-  graph: 1
+  graph: 0
   xray: 0
-index: calculadora
+index: toalha
